@@ -1,0 +1,18 @@
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid var(--blue);
+
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  appearance: auto;
+  clip-path: circle(46% at 50% 50%);
+}
