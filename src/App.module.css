@@ -18,8 +18,6 @@
 }
 
 .container {
-  color: white;
-
   width: 100%;
   max-width: 46rem;
   margin: auto;
@@ -70,6 +68,20 @@
   color: var(--blue);
 }
 
+.tasksDone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tasksDone h2 {
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+
+  color: var(--purple);
+}
+
 .taskCounter {
   display: flex;
   flex-direction: column;
@@ -88,20 +100,6 @@
   line-height: 0.938rem;
 
   color: var(--gray-200);
-}
-
-.tasksDone {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tasksDone h2 {
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1.063rem;
-
-  color: var(--purple);
 }
 
 .tasksEmpty {
@@ -136,6 +134,11 @@
 
 @media only screen and (max-width: 768px) {
   .container {
+    max-width: 100%;
     padding: 0 1rem;
+  }
+
+  .tasksEmpty {
+    padding: 2rem 0;
   }
 }

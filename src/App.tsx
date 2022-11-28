@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { ClipboardText, PlusCircle } from 'phosphor-react'
+import { PlusCircle } from 'phosphor-react'
 import { v4 as uuid } from 'uuid'
 
 import logoImg from '@/assets/logo.svg'
@@ -91,7 +91,7 @@ export function App() {
             placeholder="Adicione uma nova tarefa"
           />
 
-          <Button aria-label="Criar uma nova tarefa" type="submit">
+          <Button type="submit">
             Criar <PlusCircle size={16} weight="bold" />
           </Button>
         </form>
@@ -105,8 +105,10 @@ export function App() {
             </div>
 
             <div className={styles.tasksDone}>
-              <h2>Tarefas concluídas</h2>
-              <span className={styles.taskCounter}>{totalTasksDone}</span>
+              <h2>Concluídas</h2>
+              <span className={styles.taskCounter}>
+                {`${totalTasksDone} de ${totalTaskCreated}`}
+              </span>
             </div>
           </div>
 
@@ -114,7 +116,6 @@ export function App() {
           {totalTaskCreated <= 0 && (
             <div className={styles.tasksEmpty}>
               <img src={clipboardImg} alt="Lista de tarefas vazia" />
-
               <strong>Você ainda não tem tarefas cadastradas</strong>
               <span>Crie tarefas e organize seus itens a fazer</span>
             </div>

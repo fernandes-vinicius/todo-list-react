@@ -19,11 +19,7 @@ export function Task({ done, content, onDelete, onCompleteChange }: TaskProps) {
 
       <p>{content}</p>
 
-      <button
-        aria-label="Deletar tarefa"
-        title="Deletar tarefa"
-        onClick={onDelete}
-      >
+      <button title="Deletar tarefa" onClick={onDelete}>
         <Trash size={20} />
       </button>
     </div>
