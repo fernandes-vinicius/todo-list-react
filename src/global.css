@@ -4,6 +4,7 @@
 
   --blue: #4ea8de;
   --blue-dark: #1e6f9f;
+  --blue-dark-rgb: 30, 111, 159;
 
   --gray-100: #f2f2f2;
   --gray-200: #d9d9d9;
@@ -20,11 +21,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--purple);
 }
 
 body {

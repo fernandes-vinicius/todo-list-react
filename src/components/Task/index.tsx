@@ -24,7 +24,7 @@ export function Task({ done, content, onDelete, onCompleteChange }: TaskProps) {
         title="Deletar tarefa"
         onClick={onDelete}
       >
-        <Trash size={24} />
+        <Trash size={20} />
       </button>
     </div>
   )
